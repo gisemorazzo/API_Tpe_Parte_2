@@ -48,4 +48,11 @@ class TaskModel {
 
         return $this->db->lastInsertId();
     }
+
+    function getProductsOnSaleByCategory($id){
+        $query = $this->db->prepare( "SELECT * FROM producto WHERE id_categoria_fk = ? AND en_oferta = 1");
+        $query->execute(array($id));
+        $products = $query->fetchAll(PDO::FETCH_OBJ);
+        return $products;
+    }
 }

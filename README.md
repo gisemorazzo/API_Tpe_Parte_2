@@ -42,3 +42,6 @@ ej: http://localhost/web2/Api/tpe2-api/api/productos/ Para insertar un nuevo pro
 
 # VERBO DELETE
 ej: http://localhost/web2/Api/tpe2-api/api/productos/24 (Elimina un producto por su ID).
+
+# Filtrado
+ filtrado en oferta de producto por categoria ej:http://localhost/web2/Api/tpe2-api/api/productosEnOfertaPorCategoria/11 (va a buscar al producto en que se encuentra en oferta)

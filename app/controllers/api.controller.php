@@ -42,9 +42,19 @@ class ApiController {
         if($productos != null) {
             $this->view->response($productos, 200);
         } else {
-            $this->viw->response("Error, 'orden' o 'atriburo' invalido", 400);
+            $this->view->response("Error, 'orden' o 'atriburo' invalido", 400);
         }
     }
+    function getProductsOnSaleByCategory($params = null){
+        $id = $params[':ID'];
+        $productos = $this->model->getProductsOnSaleByCategory($id);
+        if($productos != null) {
+            $this->view->response($productos, 200);
+        } else {
+            $this->view->response("Error, 'atriburo' invalido", 400);
+        }
+    }
+    
 
     public function getProducto($params = null) {
         // obtengo el id del arreglo de params
