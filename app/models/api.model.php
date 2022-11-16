@@ -1,6 +1,6 @@
 <?php
 
-class TaskModel {
+class ApiModel {
 
     private $db;
 

@@ -9,10 +9,9 @@ class ApiController {
     private $data;
 
     public function __construct() {
-        $this->model = new TaskModel();
+        $this->model = new ApiModel();
         $this->view = new ApiView();
         
-        // lee el body del request
         $this->data = file_get_contents("php://input");
     }
 
@@ -42,7 +41,7 @@ class ApiController {
         if($productos != null) {
             $this->view->response($productos, 200);
         } else {
-            $this->view->response("Error, 'orden' o 'atriburo' invalido", 400);
+            $this->view->response("Error, 'orden' o 'pagina'o 'atriburo' invalido", 400);
         }
     }
     function getProductsOnSaleByCategory($params = null){
@@ -57,11 +56,8 @@ class ApiController {
     
 
     public function getProducto($params = null) {
-        // obtengo el id del arreglo de params
         $id = $params[':ID'];
         $producto = $this->model->getProducto($id);
-
-        // si no existe devuelvo 404
         if ($producto)
             $this->view->response($producto);
         else 
