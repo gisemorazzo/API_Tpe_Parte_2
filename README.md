@@ -1,6 +1,6 @@
 # API_Tpe_Parte_2
 
-Este proyecto se puede ver en https://github.com/gisemorazzo/API_Tpe_Parte_2.git)
+Este proyecto se puede ver en https://github.com/gisemorazzo/API_Tpe_Parte_2.git
 
 # Development server
 Se necesita intalar Xampp (para poder levantar la base de datos (MySQL) y el servidor(Apache)).
